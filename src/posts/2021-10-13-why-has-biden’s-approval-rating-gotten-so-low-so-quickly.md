@@ -3,8 +3,9 @@ title: Why Has Biden’s Approval Rating Gotten So Low So Quickly?
 description: President Biden’s approval ratings are underwater — 49.2 percent
   disapprove of the job he is doing as president while 44.6 percent approve,
   according to FiveThirtyEight’s presidential approval tracker.
-tag:
+tags:
   - Politics
+  - posts
 date: 2021-10-13T16:27:16.821Z
 ---
 <!--StartFragment-->

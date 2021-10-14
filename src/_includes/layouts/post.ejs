@@ -6,7 +6,14 @@ layout: layouts/base.ejs
   <header>
     <h1 class="text-center font-bold text-3xl text-gray-800"><%= title %></h1>
     <div class="text-center text-sm mb-8">
-      <%= this.dateFns.format(new Date(date), 'LLLL d, yyyy') %>
+      <% this.dateFns.format(new Date(date), 'LLLL d, yyyy') %>
+    </div>
+    <div class="text-center text-md">
+      <% if (locals.tags) { %>
+        <% tags.forEach((tag)=> { %>
+          <a href="/tags/<%= tag.toLowerCase() %>" class="text-lg underline font-semibold"><%= tag %></a>
+        <% }) %>
+      <% } %>
     </div>
   </header>
 
