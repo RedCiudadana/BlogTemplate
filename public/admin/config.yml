@@ -54,11 +54,11 @@ collections:
         label: "Menu"
         file: "src/_data/menu.json"
         fields:
-          - name: "link"
+          - name: "links"
             label: "Links"
             widget: "list"
-            summary: "{{fields.name}} - {{fields.link}}"
+            summary: "{{fields.name}} - {{fields.url}}"
             fields:
               - { name: "name", label: "Link name" }
-              - { name: "link", label: "Link" }
+              - { name: "url", label: "Url" }
               - { name: "external", label: "External", widget: "boolean", default: true, hint: "External, if is a link out of the blog" }
