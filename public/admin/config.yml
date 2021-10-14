@@ -17,7 +17,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { name: "title", label: "Title" }
       - { name: "description", label: "Description" }
-      - { name: "tags", label: "Tags", widget: "relation", collection: "tag", searchFields: ["title"], valueField: "title", multiple: true, default: ["Posts"] }
+      - { name: "tags", label: "Tags", widget: "relation", collection: "tag", searchFields: ["title"], valueField: "title", multiple: true, default: ["posts"] }
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "body", label: "Body", widget: "markdown" }
   - name: "config"

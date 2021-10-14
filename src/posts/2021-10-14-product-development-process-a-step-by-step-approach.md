@@ -4,7 +4,7 @@ description: Bringing a new product to market is hard. The scary statistic is
   that 95% of new products fail despite all the time, effort, and resources
   invested to bring these ideas to life.
 tags:
-  - Posts
+  - posts
 date: 2021-10-14T18:52:15.708Z
 ---
 <!--StartFragment-->
