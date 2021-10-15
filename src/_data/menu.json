@@ -9,6 +9,11 @@
       "external": true,
       "name": "Red Ciudadana",
       "url": "http://redciudadana.org"
+    },
+    {
+      "external": false,
+      "url": "https://stupefied-golick-7e0f06.netlify.app/politics/",
+      "name": "Politics"
     }
   ]
 }
