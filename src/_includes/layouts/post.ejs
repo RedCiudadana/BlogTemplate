@@ -13,7 +13,7 @@ layout: layouts/base.ejs
         <% tags.forEach((tag)=> { %>
           <!-- Don't show hidden tag -->
           <% if (tag !== 'posts') { %>
-            <a href="/tags/<%= tag.toLowerCase() %>" class="text-lg underline font-semibold"><%= tag %></a>
+            <a href="/<%= tag.toLowerCase() %>" class="text-lg underline font-semibold"><%= tag %></a>
           <% } %>
         <% }) %>
       <% } %>

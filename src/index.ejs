@@ -19,7 +19,7 @@ eleventyComputed:
               <% post.data.tags.forEach((tag)=> { %>
                 <!-- Don't show hidden tag -->
                 <% if (tag !== 'posts') { %>
-                  <a href="/tags/<%= tag.toLowerCase() %>" class="text-sm text-gray-600"><%= tag %></a>
+                  <a href="/<%= tag.toLowerCase() %>" class="text-sm text-gray-600"><%= tag %></a>
                   <% } %>
               <% }) %>
             <% } %>
