@@ -6,6 +6,7 @@ description: Bringing a new product to market is hard. The scary statistic is
 tags:
   - posts
 date: 2021-10-14T18:52:15.708Z
+highlight: true
 ---
 <!--StartFragment-->
 

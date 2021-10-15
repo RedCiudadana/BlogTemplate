@@ -7,6 +7,7 @@ tags:
   - Politics
   - posts
 date: 2021-10-13T16:27:16.821Z
+highlight: true
 ---
 <!--StartFragment-->
 

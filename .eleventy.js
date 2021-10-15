@@ -42,6 +42,12 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.addCollection('postsHighlihted', (collectionApi) => {
+    return collectionApi.getFilteredByTag('posts').filter((item) => {
+      return item.data.highlight == true;
+    });
+  });
+
   return {
     dir: { input: 'src', output: '_site', data: '_data' },
   };
