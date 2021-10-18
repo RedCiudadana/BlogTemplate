@@ -9,8 +9,8 @@ eleventyComputed:
   title: '<% if (pagination.pageNumber > 0) { %><%= `Page ${pagination.pageNumber + 1} | ${site.title}` %><% } else { %><%= site.title %><% } %>'
 ---
 
-<div class="grid grid-cols-3 gap-4">
-  <div class="col-span-2">
+<div class="grid grid-cols-9 gap-4">
+  <div class="col-span-4">
     <ul>
       <% collections.postsHighlihted.forEach((post)=> { %>
         <li class="mb-3 block justify-between border-b pb-4">
@@ -19,12 +19,12 @@ eleventyComputed:
               <% post.data.tags.forEach((tag)=> { %>
                 <!-- Don't show hidden tag -->
                 <% if (tag !== 'posts') { %>
-                  <a href="/<%= tag.toLowerCase() %>" class="text-sm text-gray-600"><%= tag %></a>
+                  <a href="/<%= tag.toLowerCase() %>" class="font-mono text-sm tracking-wider uppercase text-gray-600"><%= tag %></a>
                   <% } %>
               <% }) %>
             <% } %>
           </div>
-          <a href="<%= post.url %>">
+          <a class="font-bold text-gray-900 leading-tight inline-block mb-4" href="<%= post.url %>">
             <%= post.data.title %>
           </a>
           <p class="text-sm">
@@ -34,33 +34,47 @@ eleventyComputed:
         <% }) %>
     </ul>
   </div>
-  <div>
-    <h2 class="mb-4">Lastest posts</h2>
+  <div class="col-span-2 border-l border-gray-400 pl-5">
+    <h2 class="mb-4 text-base font-mono tracking-wider uppercase text-gray-600 border-b border-gray-400 leading-none pb-2">THE LATEST</h2>
     <ul>
       <% list.forEach((post)=> { %>
-        <li class="mb-3 block justify-between">
-          <a class="text-base	" href="<%= post.url %>">
+        <li class="mb-3 block justify-between border-b border-gray-400 pb-4">
+          <div class="text-xs text-left font-mono uppercase text-gray-600 tracking-wider">
+            <%= this.dateFns.format(new Date(post.data.date), 'LLLL d' ) %>
+          </div>
+          <a class="text-base font-bold text-gray-900 leading-tight inline-block" href="<%= post.url %>">
             <%= post.data.title %>
           </a>
-    
-          <div class="text-xs text-right">
-            <%= this.dateFns.format(new Date(post.data.date), 'LLLL d, yyyy' ) %>
-          </div>
         </li>
         <% }) %>
     </ul>
     
-    <div class="text-sm flex justify-between">
+    <div class="text-sm flex justify-center">
       <% if (pagination.previous) { %>
         <div>
-          <a href="<%= pagination.previous.replace(/index.html$/, "") %>">← Newer Posts</a>
+          <a class="text-gray-900 text-xs border border-gray-900 p-2 text-center" href="<%= pagination.previous.replace(/index.html$/, "") %>"><!-- ←  -->Newer Posts</a>
         </div>
       <% } %>
       <% if (pagination.next) { %>
-        <div class="text-right ml-auto">
-          <a href="<%= pagination.next.replace(/index.html$/, "") %>">Older Posts →</a>
+        <div class="text-right mt-2">
+          <a class="text-gray-900 text-xs border border-gray-900 p-2 text-center" href="<%= pagination.next.replace(/index.html$/, "") %>">Older Posts<!--  → --></a>
         </div>
       <% } %>
     </div>
+  </div>
+  <div class="col-span-3 border-l border-gray-400 pl-5">
+    <h2 class="mb-4 text-base font-mono tracking-wider uppercase text-gray-600  border-b border-gray-400 leading-none pb-2">Interactives</h2>
+    <ul>
+      <li class="mb-3 block justify-between border-b border-gray-400">
+        <iframe id="pym-fivethirtyeight_embed_373" title=""
+          src="https://projects.fivethirtyeight.com/biden-approval-rating/promo.html" width="300" height="215"
+          scrolling="no"></iframe>
+      </li>
+      <li class="mb-3 block justify-between border-b border-gray-400 pb-6">
+        <iframe id="pym-fivethirtyeight_embed_381" title="Redistricting Tracker"
+          src="https://projects.fivethirtyeight.com/redistricting-2022-maps/promo.html" width="300" height="305"
+          scrolling="no"></iframe>
+      </li>
+    </ul>
   </div>
 </div>
