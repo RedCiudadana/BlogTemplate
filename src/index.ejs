@@ -52,12 +52,12 @@ eleventyComputed:
     <div class="text-sm flex justify-center">
       <% if (pagination.previous) { %>
         <div>
-          <a class="text-gray-900 text-xs border border-gray-900 p-2 text-center" href="<%= pagination.previous.replace(/index.html$/, "") %>"><!-- ←  -->Newer Posts</a>
+          <a class="text-gray-900 text-xs border border-gray-900 p-2 text-center hover:bg-gray-800 hover:border-gray-800 hover:no-underline hover:text-gray-50" href="<%= pagination.previous.replace(/index.html$/, "") %>"><!-- ←  -->Newer Posts</a>
         </div>
       <% } %>
       <% if (pagination.next) { %>
         <div class="text-right mt-2">
-          <a class="text-gray-900 text-xs border border-gray-900 p-2 text-center" href="<%= pagination.next.replace(/index.html$/, "") %>">Older Posts<!--  → --></a>
+          <a class="text-gray-900 text-xs border border-gray-900 p-2 text-center hover:bg-gray-800 hover:border-gray-800 hover:no-underline hover:text-gray-50" href="<%= pagination.next.replace(/index.html$/, "") %>">Older Posts<!--  → --></a>
         </div>
       <% } %>
     </div>
@@ -76,5 +76,44 @@ eleventyComputed:
           scrolling="no"></iframe>
       </li>
     </ul>
+  </div>
+  <div class="col-span-9">
+    <div class="bg-gradient-to-r from-red-300 to-gray-400 h-96 w-full flex p-12">
+      <div class="m-auto max-w-lg flex">
+        <div class="w-1/3 text-center">
+          <button class="bg-black h-20 w-20 rounded-full"></button>
+        </div>
+        <div class="w-2/3">
+          <h2 class="mb-1 text-sm font-mono tracking-wider uppercase text-gray-600 leading-none">THE LATEST</h2>
+          <h1 class="mb-4 font-bold text-gray-900 text-3xl leading-tight">Product Development Process: A Step-By-Step Approach</h1>
+          <h3 class="text-xs text-gray-800">By UxPin</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-span-9 justify-between flex">
+    <a class="text-gray-900 text-xs border border-gray-900 p-2 text-center hover:bg-gray-800 hover:border-gray-800 hover:no-underline hover:text-gray-50" href="#">
+      Subscribe on YouTube
+    </a>
+    <a class="text-gray-900 text-xs border border-gray-900 p-2 text-center hover:bg-gray-800 hover:border-gray-800 hover:no-underline hover:text-gray-50" href="#">
+      All videos
+    </a>
+  </div>
+  <div class="col-span-9">
+    <div class="bg-red-200 text-gray-900 h-64 w-full flex p-12">
+      <div class="w-1/2 flex">
+        <h1 class="text-3xl font-bold my-auto">FiveThirtyEight</h1>
+      </div>
+      <div class="w-1/2 flex">
+        <div class="block my-auto">
+          <h2 class="text-lg font-bold mb-2">Want the latest politics news? Get it in your inbox</h2>
+          <form class="flex mb-2">
+            <input type="email" name="email" placeholder="Email address" class="px-2 h-9 leading-none">
+            <button class="text-gray-900 text-xs border border-gray-900 p-2 text-center hover:bg-gray-800 hover:border-gray-800 hover:no-underline hover:text-gray-50 ml-4 h-9 leading-none">Sign me up</button>
+          </form>
+          <a href="#" class="text-base text-gray-900">See all newsletters</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
