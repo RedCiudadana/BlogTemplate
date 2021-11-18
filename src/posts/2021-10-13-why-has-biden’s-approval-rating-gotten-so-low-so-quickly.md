@@ -10,10 +10,6 @@ tags:
 date: 2021-10-13T16:27:16.821Z
 highlight: true
 ---
-DULCE
-
-
-
 <!--StartFragment-->
 
 This has been true for a while now, too. Since Aug. 30, more Americans have disapproved of Biden than have approved of him. 
