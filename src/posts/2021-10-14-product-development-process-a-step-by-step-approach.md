@@ -1,6 +1,6 @@
 ---
 title: "Product Development Process: A Step-By-Step Approach"
-image: /assets/images/posts/designops-how-to-improve-workflow-1024x512.png-1-.webp
+image: /assets/images/posts/designops-how-to-improve-workflow-1024x512.png-1.png
 description: Bringing a new product to market is hard. The scary statistic is
   that 95% of new products fail despite all the time, effort, and resources
   invested to bring these ideas to life.
